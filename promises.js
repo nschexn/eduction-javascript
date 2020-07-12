@@ -17,6 +17,10 @@ const wait = delay => {
       }, delay);
   });
 }
-// wait(2000).then(() => {
-//   console.log("This will be delayed 2 seconds!");
-// });
+wait(2000)
+  .then(() => {
+    console.log("This will be delayed 2 seconds!");
+  })
+  .catch(() => {
+    console.log("Something went wrong");
+  });
