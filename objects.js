@@ -1,20 +1,26 @@
 // Use for…in to iterate over the properties of an object (the object keys):
-/* Iterating over Objects : for...in */
+// Iterating over Objects : for...in 
+/* for (let user in users) {
+  console.log(user);
+} */
 
 
-const o = {
+const obj = {
     a: 1,
     b: 2,
     c: 3,
     d: 4
 };
 
-/* console.log('property: value');
-// 'p' is the property
-for (p in o) {
-    console.log(p + ': ' + o[p]);
-} */
+/*  
+  CHECK FOR PROPERTY IN OBJECT
+  users.hasOwnProperty('Alan'); //hasOwnProperty method
+  'Alan' in users; // KEY in OBJECT
+*/
 
-for(p in o){
-  console.log(o[p])
-}
+/* 
+  METHODS
+
+  Object.keys(obj); // return an array of object keys
+
+*/
