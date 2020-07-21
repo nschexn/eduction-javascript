@@ -1,0 +1,18 @@
+
+.example {
+  /* define */
+  display: grid;
+  /* grid-template-columns & grid-template-rows define structure  */
+  grid-template-columns: 20% 50% 30%;
+  grid-template-rows: 33% 33% 33%;
+  /* grid-column-start & grid-column define amount to span */
+  grid-column-start: 1;
+  grid-column-end: 4; /* up to but not including. able to accept negative values */
+  grid-column-end: span 5; /* you can also use span +num  */ 
+
+
+  
+}
+
+
+
