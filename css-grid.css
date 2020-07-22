@@ -4,11 +4,55 @@
   display: grid;
   /* grid-template-columns & grid-template-rows define structure  */
   grid-template-columns: 20% 50% 30%;
-  grid-template-rows: 33% 33% 33%;
+  /* use repeat() function to define multiple */
+  grid-template-rows: repeat(3, 33%);
+
+  /*
+  Grid also introduces a new unit, the fractional fr. 
+  Each fr unit allocates one share of the available space. 
+  
+  For example, if two elements are set to 1fr and 3fr respectively, 
+  the space is divided into 4 equal shares; 
+  the first element occupies 1/4 
+  the second element 3/4 of any leftover space.
+  */
+  grid-template-columns: 1fr 5fr;
+
+  /*
+  grid-template is a shorthand property that 
+  combines grid-template-rows and grid-template-columns.
+
+  For example, grid-template: 50% 50% / 200px; will create a grid 
+  with two rows that are 50% each, and one column that is 200 pixels wide.
+  */
+  grid-template: 50% 50% / 200px;
+
   /* grid-column-start & grid-column define amount to span */
   grid-column-start: 1;
   grid-column-end: 4; /* up to but not including. able to accept negative values */
   grid-column-end: span 5; /* you can also use span +num  */ 
+  /* shorthand for defining grid-column-start and grid-column-end */
+  grid-column: 4/6;
+
+  /* grid-row-start, grid-row-end, and grid-row work same as column */
+  grid-row: 1 / 5;
+
+  /* grid-area shorthand to define column and rows */
+  /* grid-area accepts four values separated by slashes: 
+    grid-row-start, grid-column-start, grid-row-end, grid-column-end */
+  grid-area: 1 / 2 / 4 / 6;
+
+  /*
+  If grid items aren't explicitly placed with grid-area, grid-column, grid-row, etc., 
+  they are automatically placed according to their order in the source code. 
+  We can override this using the order property, 
+  which is one of the advantages of grid over table-based layout.
+
+  By default, all grid items have an order of 0, 
+  but this can be set to any positive or negative value, 
+  similar to z-index.
+  */
+  order: 2
 
 
   
